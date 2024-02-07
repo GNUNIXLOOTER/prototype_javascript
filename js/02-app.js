@@ -1,5 +1,4 @@
 // El problema que solucionan los prototypes...
-
 function Cliente(nombre, saldo) {
     this.nombre = nombre;
     this.saldo = saldo;
@@ -30,4 +29,7 @@ const ccj = new Empresa('Código Con Juan', 400);
 console.log(ccj);
 
 
-// Debido a que tengo una propiedad nueva, es dificil reutilizar esa función, lo cual nos llevaria digamos a muchas funciones que no sabriamos cuales utilizar para los diferentes objetos, esa es una ventaja que nos dan los prototypes ya que podemos crear funciones que se podrían atar o utilizar unicamente con determinados objetos...
+// Debido a que tengo una propiedad nueva, es dificil reutilizar esa función,
+// lo cual nos llevaria digamos a muchas funciones que no sabriamos cuales utilizar para los diferentes objetos, 
+//esa es una ventaja que nos dan los prototypes ya que podemos crear funciones que se podrían atar o utilizar unicamente con determinados
+// objetos...

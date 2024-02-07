@@ -1,13 +1,12 @@
 // Vamos a crear un ejemplo...
-
-
 function Cliente(nombre, saldo) {
     this.nombre = nombre;
     this.saldo = saldo;
 }
 
 // Obtener Tipo de Cliente
-Cliente.prototype.tipoCliente = function()  { // Con prototypes tienes que utilizar function, function buscara en el mismo objeto mientras que un arrow function irá hacia la ventana global marcandote un undefined
+// Con prototypes tienes que utilizar function, function buscara en el mismo objeto mientras que un arrow function irá hacia la ventana global marcandote un undefined
+Cliente.prototype.tipoCliente = function()  { 
     let tipo;
     if(this.saldo > 10000) {
         tipo = 'Gold';
@@ -20,10 +19,12 @@ Cliente.prototype.tipoCliente = function()  { // Con prototypes tienes que utili
 }
 
 // Otro Prototipo para el nombre completo
+// en este caso puedo hacer un llamado a propiedades del objeto o a otros prototype
 Cliente.prototype.nombreClienteSaldo = function()  {
     return `Nombre: ${this.nombre}, Saldo ${this.saldo}, Tipo Cliente:  ${this.tipoCliente()} `;
 }
 
+// prototype funcion para retirar saldo
 Cliente.prototype.retiraSaldo = function(retiro)  {
     this.saldo -= retiro;
 }

@@ -55,11 +55,14 @@ function Persona(nombre, saldo, telefono) {
     // this.telefono = telefono;
 
     // Debe ser:
+    // call lo que hace es que manda llamar una funcion en este caso Cliente
     Cliente.call(this, nombre, saldo);
     this.telefono = telefono;
 }
 
 // Heredar la función ( Antes de Instanciarlo )
+// en este codigo le pasamos todo el prototype de Cliente hacia el prototype de Persona
+// Object.create es una funcion diseñada para copiar el prototype y asignarlo hacia otra funcion
 Persona.prototype = Object.create( Cliente.prototype );
 
 // Heredar el constructor
